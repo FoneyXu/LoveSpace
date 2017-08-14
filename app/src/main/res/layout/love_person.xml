@@ -4,8 +4,16 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/person_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LOVE CHAT"/>
+        android:text="LOVE PERSON"/>
+
+    <Button
+        android:id="@+id/ceshi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试"
+        android:textSize="20sp"/>
 
 </LinearLayout>
