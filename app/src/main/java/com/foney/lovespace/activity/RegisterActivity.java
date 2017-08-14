@@ -95,6 +95,7 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
                     return;
                 }
                 params.put("phone",phoneEditText.getText().toString());
+                params.put("type","0");//type=0表示当前获取验证码是注册时使用
                 HttpManager.getInstance().doPost(SysUtil.getUrl("/login/getValidateCode"), params, new MyHttpCallback() {
                     @Override
                     public void onBeforeRequest(Request request) {
