@@ -1,16 +1,12 @@
-package com.foney.lovespace.homefragment;
+package com.foney.lovespace;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 
-import com.foney.lovespace.R;
 import com.foney.lovespace.adapter.ChatAdapter;
 import com.foney.lovespace.entity.Chat;
 
@@ -23,32 +19,32 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * Created by foney on 2017/8/14.
+ * Created by foney on 2017/8/15.
  */
 
-public class LoveChatFragment extends Fragment {
+public class TestActivity extends AppCompatActivity {
 
     private List<Chat> chats = new ArrayList<Chat>();
     private RecyclerView recyclerView;
     private ChatAdapter chatAdapter;
-    @BindView(R.id.chat_msg_edit_text) EditText chatMsgEditText;
+    private EditText chatMsgEditText;
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.love_chat,container,false);
-        ButterKnife.bind(this,view);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.love_chat);
+        ButterKnife.bind(this);
         initChats();
-        recyclerView = (RecyclerView)view.findViewById(R.id.chat_msg_list_recycler_view);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        chatMsgEditText = (EditText) findViewById(R.id.chat_msg_edit_text);
+        recyclerView = (RecyclerView)findViewById(R.id.chat_msg_list_recycler_view);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         chatAdapter = new ChatAdapter(chats);
         recyclerView.setAdapter(chatAdapter);
-        return view;
     }
 
     @OnClick(R.id.chat_send_button) void send() {
         String msg = chatMsgEditText.getText().toString();
-        if(msg != null && !"".equals(msg)) {
+        if(msg != null && "".equals(msg)) {
             Chat chat = new Chat();
             chat.setToCustomerId(456);
             chat.setFromCustomerId(123);
@@ -97,5 +93,4 @@ public class LoveChatFragment extends Fragment {
         chat5.setToCustomerId(123);
         chats.add(chat5);
     }
-
 }

@@ -4,13 +4,13 @@
 
     <item
         android:id="@+id/story"
-        android:icon="@mipmap/story"
+        android:icon="@drawable/logo"
         android:title="story"
         android:enabled="true"/>
     <item
         android:id="@+id/told"
         android:icon="@drawable/told"
-        android:title="told"/>
+        android:title="told" />
     <item
         android:id="@+id/chat"
         android:icon="@drawable/chat"
@@ -18,7 +18,7 @@
 
     <item
         android:id="@+id/person"
-        android:icon="@drawable/person"
+        android:icon="@mipmap/ic_launcher"
         android:title="person"/>
 
 </menu>

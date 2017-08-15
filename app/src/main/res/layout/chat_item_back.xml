@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/left_chat"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="left">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/left_chat_head_image_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/person"/>
+            <TextView
+                android:id="@+id/left_chat_time_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_toRightOf="@+id/left_chat_head_image_view"
+                android:layout_marginLeft="10dp"
+                android:text="2017年8月15日14:09:20"
+                android:textColor="#666666"
+                />
+            <TextView
+                android:id="@+id/left_chat_content_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/left_chat_head_image_view"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/left_chat_time_text_view"
+                android:maxWidth="200dp"
+                android:text="发来的消息发来的消息发来的消息发来的消息发来的消息发来的消息发来的消息发来的消息发来的消息"
+                android:padding="10dp"
+                android:textSize="12sp"
+                android:textColor="#F0FFFF"
+                android:background="#666666"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right_chat"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="right">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/right_chat_head_image_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/person"/>
+            <TextView
+                android:id="@+id/right_chat_time_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_toLeftOf="@+id/right_chat_head_image_view"
+                android:layout_marginRight="10dp"
+                android:text="2017年8月15日14:09:20"
+                android:textColor="#666666"
+                />
+            <TextView
+                android:id="@+id/right_chat_content_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/right_chat_head_image_view"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/right_chat_time_text_view"
+                android:maxWidth="200dp"
+                android:text="发来的消息发来的消息发来的消息发来的消息发来的消息发来的消息发来的消息发来的消息发来的消息"
+                android:padding="10dp"
+                android:textSize="12sp"
+                android:textColor="#F0FFFF"
+                android:background="#666666"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

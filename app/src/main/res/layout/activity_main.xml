@@ -11,33 +11,38 @@
         android:id="@+id/main_head"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@drawable/logo">
+        android:background="#000">
 
         <TextView
+            android:id="@+id/head_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:textSize="24sp"
+            android:textColor="#fff"
             android:text="STORY"/>
 
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="vertical"
         android:id="@+id/id_content"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/main_head"/>
+        android:layout_below="@id/main_head"
+        android:layout_above="@+id/bottom_navigation_bar">
+
+    </RelativeLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        app:menu="@menu/navigation"
         android:layout_alignParentBottom="true"
         app:itemBackground="@android:color/black"
         app:itemIconTint="@android:color/white"
-        app:itemTextColor="@android:color/white"
-        app:menu="@menu/navigation"/>
+        app:itemTextColor="@android:color/white" />
 
 
 </RelativeLayout>

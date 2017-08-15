@@ -1,5 +1,6 @@
 package com.foney.lovespace.homefragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.app.Fragment;
@@ -10,9 +11,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.foney.lovespace.MainActivity;
 import com.foney.lovespace.R;
+import com.foney.lovespace.activity.PersonInfoActivity;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -26,10 +30,13 @@ public class LovePersonFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.love_person,container,false);
+        View view = inflater.inflate(R.layout.love_person,container,false);
+        ButterKnife.bind(this,view);
+        return view;
     }
     
     @OnClick(R.id.ceshi) void ceshi() {
-        personTextView.setText("个人中心");
+        Intent intent = new Intent(getActivity(),PersonInfoActivity.class);
+        startActivity(intent);
     }
 }

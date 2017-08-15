@@ -35,6 +35,5 @@ dependencies {
     compile 'com.zyao89:zloading:1.0.5'/*加载框*/
     /*底部导航栏支持库*/
     compile'com.android.support:design:25.0.1'
-    compile'com.android.support:support-v4:25.0.1'
     testCompile 'junit:junit:4.12'
 }
